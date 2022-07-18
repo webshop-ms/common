@@ -37,8 +37,8 @@ public class EntityServiceImpl<Entity extends Identity, Dao extends EntityDao<En
     }
 
     @Override
-    public Entity getItemByUuid(String uuid) {
-        return dao.getItemByUuid(uuid);
+    public Entity getByUuid(String uuid) {
+        return dao.getByUuid(uuid);
     }
 
     @Override

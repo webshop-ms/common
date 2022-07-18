@@ -40,7 +40,7 @@ public class EntityDaoImpl<Entity extends Identity, Repository extends EntityRep
     }
 
     @Override
-    public Entity getItemByUuid(String uuid) {
+    public Entity getByUuid(String uuid) {
         return repository.findByUuid(UUID.fromString(uuid));
     }
 
