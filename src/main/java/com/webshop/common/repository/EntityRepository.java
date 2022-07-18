@@ -9,4 +9,6 @@ public interface EntityRepository<Entity extends Identity> extends CrudRepositor
 
     Entity findByUuid(UUID uuid);
 
+    void deleteByUuid(UUID uuid);
+
 }

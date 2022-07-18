@@ -43,4 +43,9 @@ public class EntityDaoImpl<Entity extends Identity, Repository extends EntityRep
     public Entity getItemByUuid(String uuid) {
         return repository.findByUuid(UUID.fromString(uuid));
     }
+
+    @Override
+    public void deleteByUuid(String uuid) {
+        repository.deleteByUuid(UUID.fromString(uuid));
+    }
 }

@@ -40,4 +40,9 @@ public class EntityServiceImpl<Entity extends Identity, Dao extends EntityDao<En
     public Entity getItemByUuid(String uuid) {
         return dao.getItemByUuid(uuid);
     }
+
+    @Override
+    public void deleteByUuid(String uuid) {
+        dao.deleteByUuid(uuid);
+    }
 }

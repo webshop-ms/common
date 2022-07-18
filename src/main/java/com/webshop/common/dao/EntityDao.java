@@ -15,4 +15,6 @@ public interface EntityDao<Entity extends Identity> {
     List<Entity> getAll();
 
     Entity getItemByUuid(String uuid);
+
+    void deleteByUuid(String uuid);
 }
