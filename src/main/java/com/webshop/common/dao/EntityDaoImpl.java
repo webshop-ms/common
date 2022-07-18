@@ -1,13 +1,15 @@
 package com.webshop.common.dao;
 
 import com.webshop.common.model.model.entity.Identity;
+import com.webshop.common.repository.EntityRepository;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-public class EntityDaoImpl<Entity extends Identity, Repository extends CrudRepository<Entity, Long>>
+public class EntityDaoImpl<Entity extends Identity, Repository extends EntityRepository<Entity>>
     implements EntityDao<Entity> {
 
     protected Repository repository;
@@ -35,5 +37,10 @@ public class EntityDaoImpl<Entity extends Identity, Repository extends CrudRepos
     public List<Entity> getAll() {
         return StreamSupport.stream(repository.findAll().spliterator(), false)
             .collect(Collectors.toList());
+    }
+
+    @Override
+    public Entity getItemByUuid(String uuid) {
+        return repository.findByUuid(UUID.fromString(uuid));
     }
 }

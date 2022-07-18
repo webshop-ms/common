@@ -36,4 +36,8 @@ public class EntityServiceImpl<Entity extends Identity, Dao extends EntityDao<En
             .collect(Collectors.toList());
     }
 
+    @Override
+    public Entity getItemByUuid(String uuid) {
+        return dao.getItemByUuid(uuid);
+    }
 }

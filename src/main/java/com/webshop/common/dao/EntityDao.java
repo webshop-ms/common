@@ -13,4 +13,6 @@ public interface EntityDao<Entity extends Identity> {
     Entity save(Entity entity);
 
     List<Entity> getAll();
+
+    Entity getItemByUuid(String uuid);
 }
