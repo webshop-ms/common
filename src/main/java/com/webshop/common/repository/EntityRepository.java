@@ -1,6 +1,6 @@
 package com.webshop.common.repository;
 
-import com.webshop.common.model.model.entity.Identity;
+import com.webshop.common.model.entity.Identity;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.UUID;

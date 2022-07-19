@@ -1,7 +1,7 @@
 package com.webshop.common.service;
 
 import com.webshop.common.dao.EntityDao;
-import com.webshop.common.model.model.entity.Identity;
+import com.webshop.common.model.entity.Identity;
 
 import java.util.List;
 import java.util.stream.Collectors;

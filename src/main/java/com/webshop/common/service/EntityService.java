@@ -1,6 +1,6 @@
 package com.webshop.common.service;
 
-import com.webshop.common.model.model.entity.Identity;
+import com.webshop.common.model.entity.Identity;
 
 import java.util.List;
 

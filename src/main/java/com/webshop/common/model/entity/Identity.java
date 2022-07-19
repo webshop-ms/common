@@ -1,4 +1,4 @@
-package com.webshop.common.model.model.entity;
+package com.webshop.common.model.entity;
 
 import com.webshop.common.transformer.UuidGenerator;
 import lombok.Data;

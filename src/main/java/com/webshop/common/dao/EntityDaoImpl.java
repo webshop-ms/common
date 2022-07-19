@@ -1,8 +1,7 @@
 package com.webshop.common.dao;
 
-import com.webshop.common.model.model.entity.Identity;
+import com.webshop.common.model.entity.Identity;
 import com.webshop.common.repository.EntityRepository;
-import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 import java.util.UUID;
