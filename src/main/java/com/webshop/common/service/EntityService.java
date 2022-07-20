@@ -17,4 +17,6 @@ public interface EntityService<Entity extends Identity> {
     Entity getByUuid(String uuid);
 
     void deleteByUuid(String uuid);
+
+    List<Entity> getAllByUuids(List<String> uuids);
 }

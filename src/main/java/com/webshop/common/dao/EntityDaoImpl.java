@@ -47,4 +47,11 @@ public class EntityDaoImpl<Entity extends Identity, Repository extends EntityRep
     public void deleteByUuid(String uuid) {
         repository.deleteByUuid(UUID.fromString(uuid));
     }
+
+    @Override
+    public List<Entity> getAllByUuids(List<String> uuids) {
+
+        List<UUID> uuidList = uuids.stream().map(u -> UUID.fromString(u)).collect(Collectors.toList());
+        return repository.findAllByUuidIn(uuidList);
+    }
 }

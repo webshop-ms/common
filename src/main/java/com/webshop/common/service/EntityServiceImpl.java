@@ -45,4 +45,9 @@ public class EntityServiceImpl<Entity extends Identity, Dao extends EntityDao<En
     public void deleteByUuid(String uuid) {
         dao.deleteByUuid(uuid);
     }
+
+    @Override
+    public List<Entity> getAllByUuids(List<String> uuids) {
+        return dao.getAllByUuids(uuids);
+    }
 }
