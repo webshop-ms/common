@@ -50,8 +50,13 @@ public class EntityDaoImpl<Entity extends Identity, Repository extends EntityRep
 
     @Override
     public List<Entity> getAllByUuids(List<String> uuids) {
-
         List<UUID> uuidList = uuids.stream().map(u -> UUID.fromString(u)).collect(Collectors.toList());
         return repository.findAllByUuidIn(uuidList);
+    }
+
+    @Override
+    public List<Entity> saveAll(List<Entity> entities) {
+        Iterable<Entity> entityIterable = repository.saveAll(entities);
+        return StreamSupport.stream(entityIterable.spliterator(), false).collect(Collectors.toList());
     }
 }

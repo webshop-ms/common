@@ -50,4 +50,10 @@ public class EntityServiceImpl<Entity extends Identity, Dao extends EntityDao<En
     public List<Entity> getAllByUuids(List<String> uuids) {
         return dao.getAllByUuids(uuids);
     }
+
+    @Override
+    public List<Entity> saveAll(List<Entity> entities) {
+        return dao.saveAll(entities);
+    }
+
 }

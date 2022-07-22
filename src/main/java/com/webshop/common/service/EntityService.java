@@ -19,4 +19,7 @@ public interface EntityService<Entity extends Identity> {
     void deleteByUuid(String uuid);
 
     List<Entity> getAllByUuids(List<String> uuids);
+
+    List<Entity> saveAll(List<Entity> entities);
+
 }
